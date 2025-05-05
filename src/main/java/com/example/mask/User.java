@@ -1,46 +1,17 @@
 package com.example.mask;
 
+import lombok.Data;
+import lombok.ToString;
 
-
-
+@Data
 public class User {
 
     private String name;
+    @Mask
+    @ToString.Exclude
     private String ssn;
     @Mask
+    @ToString.Exclude
     private String msisdn;
-    @Mask
     private String password;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSsn() {
-        return ssn;
-    }
-
-    public void setSsn(String ssn) {
-        this.ssn = ssn;
-    }
-
-    public String getMsisdn() {
-        return msisdn;
-    }
-
-    public void setMsisdn(String msisdn) {
-        this.msisdn = msisdn;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
