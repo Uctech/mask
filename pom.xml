@@ -63,40 +63,6 @@
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-        <profiles>
-            <profile>
-                <id>default-tools.jar</id>
-                <activation>
-                    <property>
-                        <name>java.vendor</name>
-                        <value>Oracle Corporation</value>
-                    </property>
-                </activation>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.sun</groupId>
-                        <artifactId>tools</artifactId>
-                        <version>${java.version}</version>
-                        <scope>system</scope>
-                        <systemPath>${java.home}/../lib/tools.jar</systemPath>
-                    </dependency>
-                </dependencies>
-            </profile>
-        </profiles>
-        <dependency>
-            <groupId>org.kohsuke.metainf-services</groupId>
-            <artifactId>metainf-services</artifactId>
-            <version>1.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jdt</groupId>
-            <artifactId>core</artifactId>
-            <version>3.3.0-v_771</version>
-        </dependency>
     </dependencies>
 
     <build>
