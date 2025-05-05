@@ -3,7 +3,7 @@ package com.example.mask;
 import java.lang.reflect.Field;
 
 public class MaskingUtil {
-    public static String maskSensitiveFields(Object obj) {
+    public static String toMaskedSensitiveFieldsString(Object obj) {
         StringBuilder sb = new StringBuilder("{");
         Field[] fields = obj.getClass().getDeclaredFields();
 

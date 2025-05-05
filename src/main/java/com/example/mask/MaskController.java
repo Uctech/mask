@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 @Controller
 public class MaskController {
+    public final ObjectLoggingHelper loggingHelper = ObjectLoggingHelper.getInstance();
 
     @GetMapping("mask")
     public ResponseEntity<User> mask(){
@@ -18,7 +19,9 @@ public class MaskController {
         user.setSsn("6583ssn");
         user.setMsisdn("2348075645377");
         user.setName("John");
-        System.out.printf("User details: %s", MaskingUtil.maskSensitiveFields(user));
+        log.info("User details: {}", MaskingUtil.toMaskedSensitiveFieldsString(user));
+        loggingHelper.requestObject(log, user);
+        log.info("Object for toString {}", user);
         return ResponseEntity.ok(user);
     }
 }
