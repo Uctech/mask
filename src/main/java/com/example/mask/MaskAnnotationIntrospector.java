@@ -8,7 +8,7 @@ public class MaskAnnotationIntrospector extends JacksonAnnotationIntrospector {
     public Object findSerializer(Annotated annotated) {
         Mask mask = annotated.getAnnotation(Mask.class);
         if (mask != null) {
-            return new MaskSerializer(mask.style());
+            return new MaskSerializer(mask.partial());
         }
         return super.findSerializer(annotated);
     }
