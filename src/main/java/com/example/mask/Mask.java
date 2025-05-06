@@ -1,6 +1,5 @@
 package com.example.mask;
 
-import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.lang.annotation.ElementType;
@@ -12,4 +11,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @JsonSerialize(using = MaskSerializer.class)
 public @interface Mask {
+    boolean partial() default false;
 }

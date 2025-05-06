@@ -7,7 +7,7 @@ import lombok.ToString;
 public class User {
 
     private String name;
-    @Mask
+    @Mask(partial = true)
     @ToString.Exclude
     private String ssn;
     @Mask
