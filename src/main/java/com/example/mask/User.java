@@ -1,6 +1,5 @@
 package com.example.mask;
 
-import com.example.mask.enums.MaskingStyle;
 import lombok.Data;
 import lombok.ToString;
 
@@ -8,7 +7,7 @@ import lombok.ToString;
 public class User {
 
     private String name;
-    @Mask(style = MaskingStyle.PARTIAL)
+    @Mask(partial = true)
     @ToString.Exclude
     private String ssn;
     @Mask

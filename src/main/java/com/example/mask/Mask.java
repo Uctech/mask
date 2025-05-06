@@ -1,6 +1,5 @@
 package com.example.mask;
 
-import com.example.mask.enums.MaskingStyle;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.lang.annotation.ElementType;
